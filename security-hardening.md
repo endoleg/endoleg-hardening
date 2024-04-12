@@ -193,3 +193,12 @@ Nice health check script by
  
 https://carlwebster.com/downloads/download-info/active-directory-health-check/
 
+How to Use STIGviewer and Increase Security
+
+https://adamtheautomator.com/stig-viewer/
+
+STIGVIEWER:
+https://stigviewer.com/
+
+encyclopedia of GPO settings exists: 
+https://admx.help
