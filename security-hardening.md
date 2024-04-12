@@ -171,3 +171,25 @@ https://github.com/simeononsecurity/Windows-Optimize-Harden-Debloat
 https://github.com/gjyoung1974/hardened-windows-server/tree/master/windows-packer/scripts
 
 https://github.com/paulveillard/cybersecurity-security-harderning
+
+
+ADACLScan.ps1 - Script for ACL's in Active Directory
+https://github.com/canix1/ADACLScanner
+
+PowerHuntShares is an audit script designed in inventory, analyze, and report excessive privileges configured on Active Directory domains
+https://github.com/NetSPI/PowerHuntShares
+
+Testimo 
+by 
+@PrzemyslawKlys
+ is a PowerShell module for running health checks for Active Directory against a bunch of different tests
+https://github.com/EvotecIT/Testimo
+
+More audit tools
+https://hackerjacker.net/infosec-tools/audit-tools
+
+Nice health check script by 
+@CarlWebster
+ 
+https://carlwebster.com/downloads/download-info/active-directory-health-check/
+
