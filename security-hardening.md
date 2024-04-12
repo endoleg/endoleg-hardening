@@ -1,4 +1,14 @@
 ----------------------------------------------------------------------------------------------
+## Pentest: PingCastle - Get Active Directory Security at 80% in 20% of the time
+----------------------------------------------------------------------------------------------
+https://pingcastle.com
+https://github.com/LoicVeirman/HardenAD
+How to achieve a Score of 0/100 in #PingCastle: https://www-it--connect-fr.translate.goog/securite-active-directory-comment-atteindre-un-score-de-0-100-dans-pingcastle/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+
+
+
+
+----------------------------------------------------------------------------------------------
 ## Active Directory Security Assessment Checklist
 ----------------------------------------------------------------------------------------------
 
