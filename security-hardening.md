@@ -3,11 +3,31 @@
 ----------------------------------------------------------------------------------------------
 https://pingcastle.com
 
+https://pingcastle.com/PingCastleFiles/ad_hc_rules_list.html
+
+https://www.pingcastle.com/documentation/healthcheck/
+
 https://github.com/LoicVeirman/HardenAD
 
-How to achieve a Score of 0/100 in #PingCastle: 
+https://medium.com/manomano-tech/how-we-automated-our-pingcastle-security-audit-reports-for-our-active-directory-4b0578aa737d
+
+https://medium.com/@jshake/pingcastle-vs-purple-knight-active-directory-security-b818fa7fc36d
+
+How to achieve a Score of 0/100 in PingCastle: 
+
 https://www-it--connect-fr.translate.goog/securite-active-directory-comment-atteindre-un-score-de-0-100-dans-pingcastle/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
 
+
+----------------------------------------------------------------------------------------------
+## Pentest: Purple Knight
+----------------------------------------------------------------------------------------------
+https://www.semperis.com/purple-knight/
+
+Security Indicators - Indicators of Exposure and Compromise by Active Directory security audit Tool Purple Knigh
+
+https://www.semperis.com/purple-knight/security-indicators/
+
+https://medium.com/@jshake/pingcastle-vs-purple-knight-active-directory-security-b818fa7fc36d
 
 
 
