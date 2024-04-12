@@ -17,19 +17,22 @@ Windows Registry Editor Version 5.00
 "NTLMMinServerSec"=dword:20080000
 #>
 
-write-verbose "Check if the "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" registry key exists, If not, create it" -verbose
-if((Test-Path -LiteralPath "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa") -ne $true) {
-  New-Item "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -force -ea SilentlyContinue
-}
+#Anpassung auf lmcompatibilitylevel auf 5
 
-write-verbose "Check if the "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" registry key exists, If not, create it" -verbose
-if((Test-Path -LiteralPath "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0") -ne $true) {
-  New-Item "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" -force -ea SilentlyContinue
-}
+write-host "Get lmcompatibilitylevel"
+(Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa").lmcompatibilitylevel
+
+write-verbose "Check if the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa registry key exists, If not, create it" -verbose
+if((Test-Path -LiteralPath "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa") -ne $true) {New-Item "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -force -ea SilentlyContinue}
+
+write-verbose "Check if the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 registry key exists, If not, create it" -verbose
+if((Test-Path -LiteralPath "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0") -ne $true) {New-Item "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" -force -ea SilentlyContinue}
 
 write-verbose "Set the LMCompatibilityLevel registry value to 3 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -verbose
 write-verbose "This value determines the compatibility with older LAN Manager authentication protocols." -verbose
 New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LMCompatibilityLevel' -Value 3 -PropertyType DWord -Force -ea SilentlyContinue
+
+write-host "Network security: Minimum session security for NTLM SSP based (including secure RPC) clients to Require NTLMv2 session security and Require 128-bit encryption (all options selected)."
 
 write-verbose "Set the tlmMinClientSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key" -verbose
 write-verbose "This value specifies the minimum security configuration for NTLM clients." -verbose
