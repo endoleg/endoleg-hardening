@@ -17,8 +17,6 @@ Windows Registry Editor Version 5.00
 "NTLMMinServerSec"=dword:20080000
 #>
 
-#Anpassung auf lmcompatibilitylevel auf 5
-
 write-host "Get lmcompatibilitylevel"
 (Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa").lmcompatibilitylevel
 
@@ -34,14 +32,16 @@ New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name
 
 write-host "Network security: Minimum session security for NTLM SSP based (including secure RPC) clients to Require NTLMv2 session security and Require 128-bit encryption (all options selected)."
 
-write-verbose "Set the tlmMinClientSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key" -verbose
+write-verbose "Set the NtlmMinClientSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key" -verbose
 write-verbose "This value specifies the minimum security configuration for NTLM clients." -verbose
 New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0' -Name 'NtlmMinClientSec' -Value 537395200 -PropertyType DWord -Force -ea SilentlyContinue
-
-write-verbose "Set the TLMMinServerSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key" -verbose
-write-verbose "This value specifies the minimum security configuration for NTLM servers." -verbose
-New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0' -Name 'NTLMMinServerSec' -Value 537395200 -PropertyType DWord -Force -ea SilentlyContinue
-
 # Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> Security Options >> 
 # "Network security: Minimum session security for NTLM SSP based (including secure RPC) clients" to "Require NTLMv2 session security" and "Require 128-bit encryption" (all options selected).
 # https://www.stigviewer.com/stig/windows_server_2016/2020-06-16/finding/V-73695
+
+write-verbose "Set the NTLMMinServerSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key" -verbose
+write-verbose "This value specifies the minimum security configuration for NTLM servers." -verbose
+New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0' -Name 'NTLMMinServerSec' -Value 537395200 -PropertyType DWord -Force -ea SilentlyContinue
+# Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> Security Options >> 
+# "Network security: Minimum session security for NTLM SSP based (including secure RPC) servers" to "Require NTLMv2 session security" and "Require 128-bit encryption" (all options selected).
+# https://www.stigviewer.com/stig/windows_server_2016/2020-06-16/finding/V-73697
