@@ -28,7 +28,10 @@ if((Test-Path -LiteralPath "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0") 
 
 write-verbose "Set the LMCompatibilityLevel registry value to 3 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -verbose
 write-verbose "This value determines the compatibility with older LAN Manager authentication protocols." -verbose
-New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LMCompatibilityLevel' -Value 3 -PropertyType DWord -Force -ea SilentlyContinue
+New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LMCompatibilityLevel' -Value 5 -PropertyType DWord -Force -ea SilentlyContinue
+# Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> Security Options >> 
+# "Network security: LAN Manager authentication level" to "Send NTLMv2 response only. Refuse LM & NTLM".
+# https://www.stigviewer.com/stig/microsoft_windows_server_2019/2023-09-11/finding/V-205919
 
 write-host "Network security: Minimum session security for NTLM SSP based (including secure RPC) clients to Require NTLMv2 session security and Require 128-bit encryption (all options selected)."
 
