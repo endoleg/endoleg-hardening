@@ -26,3 +26,11 @@ https://disconnect.me/disconnect
 https://one.one.one.one/
 OptMeowt ("Opt Me Out") is a browser extension for opting you out from web tracking. OptMeowt works by sending Do Not Sell signals to visited websites per the Global Privacy Control (GPC) spec that we are developing at the W3C and placing opt out cookies.
 https://github.com/privacy-tech-lab/gpc-optmeowt
+
+
+----------------------------------------------
+
+
+https://public.cyber.mil/stigs/compilations/
+
+The SRG-STIG Library Compilation .zip files are compilations of DoD Security Requirements Guides (SRGs) and DoD Security Technical Implementation Guides (STIGs), as well as some other content that may be available through the Cyber Exchange web site’s STIG pages. Specifically excluded are Security Readiness Review (SRR) Tools (scripts and OVAL Benchmarks), Group policy objects, and draft SRGs and STIGs.
