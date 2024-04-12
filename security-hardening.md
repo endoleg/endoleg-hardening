@@ -212,3 +212,14 @@ Group Policy Eater is a PowerShell module that aims to gather information about 
 IIS Crypto 
 is a free tool that gives you the ability to enable/disable protocols, ciphers, hashes + key exchange algorithms on Windows. It also lets you reorder SSL/TLS cipher suites offered by IIS, change advanced settings, implement Best Practices etc.
 https://nartac.com/Products/IISCrypto
+
+
+Testimo 
+by 
+@PrzemyslawKlys
+ is a PowerShell module for running health checks for Active Directory against a bunch of different tests
+https://github.com/EvotecIT/Testimo
+
+More audit tools
+https://hackerjacker.net/infosec-tools/audit-tools
+
