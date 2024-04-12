@@ -27,13 +27,16 @@ if((Test-Path -LiteralPath "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0") 
   New-Item "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" -force -ea SilentlyContinue
 }
 
-write-verbose "Set the LMCompatibilityLevel registry value to 3 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" key -verbose
+write-verbose "Set the LMCompatibilityLevel registry value to 3 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" -verbose
+write-verbose "This value determines the compatibility with older LAN Manager authentication protocols." -verbose
 New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LMCompatibilityLevel' -Value 3 -PropertyType DWord -Force -ea SilentlyContinue
 
-write-verbose "Set the "tlmMinClientSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key" -verbose
+write-verbose "Set the tlmMinClientSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key" -verbose
+write-verbose "This value specifies the minimum security configuration for NTLM clients." -verbose
 New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0' -Name 'NtlmMinClientSec' -Value 537395200 -PropertyType DWord -Force -ea SilentlyContinue
 
-write-verbose "Set the "TLMMinServerSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key -verbose
+write-verbose "Set the TLMMinServerSec registry value to 537395200 in the HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0 key" -verbose
+write-verbose "This value specifies the minimum security configuration for NTLM servers." -verbose
 New-ItemProperty -LiteralPath 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0' -Name 'NTLMMinServerSec' -Value 537395200 -PropertyType DWord -Force -ea SilentlyContinue
 
 # Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> Security Options >> 
