@@ -202,3 +202,13 @@ https://stigviewer.com/
 
 encyclopedia of GPO settings exists: 
 https://admx.help
+
+https://github.com/EvotecIT/GPOZaurr
+
+GPOZaurr
+Group Policy Eater is a PowerShell module that aims to gather information about Group Policies but also allows fixing issues that you may find in them. GPOZaurr provides 360 degrees of information about Group Policies and their settings.
+
+
+IIS Crypto 
+is a free tool that gives you the ability to enable/disable protocols, ciphers, hashes + key exchange algorithms on Windows. It also lets you reorder SSL/TLS cipher suites offered by IIS, change advanced settings, implement Best Practices etc.
+https://nartac.com/Products/IISCrypto
