@@ -183,3 +183,5 @@ browser.urlbar.trimURLs = false
 
 > Punycode für internationalisierte Domainnamen, um mögliches Spoofing zu verhindern:
 network.IDN_show_punycode = true
+
+10. Dateianhänge und Makros in office
