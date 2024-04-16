@@ -191,3 +191,5 @@ network.IDN_show_punycode = true
 12. Stigviewer
 
 13. https://hotcakex.github.io/
+
+14. https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
