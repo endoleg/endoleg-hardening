@@ -11,3 +11,25 @@ Der Vulscan zeit dir an, welche Lücken dein Computer hat. Der Pentest sucht oft
 4. Nutze FQDN bei RDP
 Kerberos ist sehr sicher und kann aber nur genutzt werden, wenn der FQDN deines Computers genutzt wird. Bei Nutzung des reinen Servernamens oder der IP wird das unsichere NTLM genutzt
 
+5. Wie sicher ist mein Computer? Mach den Audit-Test
+5a. ATAPAuditor
+#https://github.com/fbprogmbh/Audit-Test-Automation
+#https://www.fb-pro.com/audit-test-automation-package-audit-tap/
+Install-Module -Name PowerShellGet -Force
+Install-Module -Name ATAPAuditor -Force
+Import-Module ATAPHtmlReport
+Import-Module ATAPAuditor
+#Save-ATAPHtmlReport -ReportName "Microsoft Windows Server 2022" -force -RiskScore
+Save-ATAPHtmlReport -ReportName "Microsoft Windows 11" -force -RiskScore
+
+5b. HardeningKitty
+#region winver
+    $OSVersion=Get-CimInstance Win32_Operatingsystem | Select-Object -expand Caption
+    $OSVersion
+#endregion
+Import-Module HardeningKitty.psm1
+#machine
+Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_machine.csv"
+#user
+Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_user.csv"
+#https://github.com/scipag/HardeningKitty
