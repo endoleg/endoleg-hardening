@@ -46,6 +46,7 @@ und als Kryptographie.cmd speichern
 https://www.nartac.com/Products/IISCrypto
 
 9. Sicher surfen - https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html
+https://hotcakex.github.io/#edge-browser-configurations
 Immer die aktuellste Version nutzen
 edge://settings/help
 Wer andere Browser nutzt: Autoupdate anschalten!
