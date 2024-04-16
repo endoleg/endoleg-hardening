@@ -12,7 +12,7 @@ Der Vulscan zeit dir an, welche Lücken dein Computer hat. Der Pentest sucht oft
 Kerberos ist sehr sicher und kann aber nur genutzt werden, wenn der FQDN deines Computers genutzt wird. Bei Nutzung des reinen Servernamens oder der IP wird das unsichere NTLM genutzt
 
 5. Wie sicher ist mein Computer? Mach den Audit-Test
-5a. ATAPAuditor
+5a. ATAPAuditor (HTML-Report)
 #https://github.com/fbprogmbh/Audit-Test-Automation
 #https://www.fb-pro.com/audit-test-automation-package-audit-tap/
 Install-Module -Name PowerShellGet -Force
@@ -22,7 +22,7 @@ Import-Module ATAPAuditor
 #Save-ATAPHtmlReport -ReportName "Microsoft Windows Server 2022" -force -RiskScore
 Save-ATAPHtmlReport -ReportName "Microsoft Windows 11" -force -RiskScore
 
-5b. HardeningKitty
+5b. HardeningKitty (keine GUI)
 #region winver
     $OSVersion=Get-CimInstance Win32_Operatingsystem | Select-Object -expand Caption
     $OSVersion
