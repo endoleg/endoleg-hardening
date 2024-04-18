@@ -1,3 +1,4 @@
+
 https://stackedit.io/app#
 
 ## 1. Mehrere Konten für IT-Administratoren: Trennung zwischen Surf- / Mail-Account und Admin-Account
@@ -24,16 +25,17 @@ https://stackedit.io/app#
 
 ## **5. Wie sicher ist mein Computer? Mach den Audit-Test**
 **5a. ATAPAuditor (HTML-Report)**
-#https://github.com/fbprogmbh/Audit-Test-Automation
-#https://www.fb-pro.com/audit-test-automation-package-audit-tap/
+https://github.com/fbprogmbh/Audit-Test-Automation
+https://www.fb-pro.com/audit-test-automation-package-audit-tap/
 Install-Module -Name PowerShellGet -Force
 Install-Module -Name ATAPAuditor -Force
 Import-Module ATAPHtmlReport
 Import-Module ATAPAuditor
-#Save-ATAPHtmlReport -ReportName "Microsoft Windows Server 2022" -force -RiskScore
+Save-ATAPHtmlReport -ReportName "Microsoft Windows Server 2022" -force -RiskScore
 Save-ATAPHtmlReport -ReportName "Microsoft Windows 11" -force -RiskScore
 
 **5b. HardeningKitty (keine GUI)**
+https://github.com/scipag/HardeningKitty
 #region winver
     $OSVersion=Get-CimInstance Win32_Operatingsystem | Select-Object -expand Caption
     $OSVersion
@@ -43,10 +45,9 @@ Import-Module HardeningKitty.psm1
 Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_machine.csv"
 #user
 Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_user.csv"
-#https://github.com/scipag/HardeningKitty
 
 ## 6. Sichere Kryptographie
-**6a https://privacy.sexy/**
+**6a Website https://privacy.sexy/**
 Auf der linken Seite "Security Improvements" anklicken
 dann
 Secure cryptpgraphy on IIS ...
@@ -57,20 +58,24 @@ und als Kryptographie.cmd speichern
 https://www.nartac.com/Products/IISCrypto
 
 **##7. Sicher surfen** 
-**7a. https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html**
+**7a. Prüfung mit SSLLabs 
+https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html**
 
-**7b. https://hotcakex.github.io/#edge-browser-configurations**
-
-**7c. Immer die aktuellste Version nutzen**
+**7b. Immer die aktuellste Browser-Version nutzen**
 edge://settings/help
 Wer andere Browser nutzt: Autoupdate anschalten!
 
+**7c. Stelle deinen Browser sicher ein 
+https://hotcakex.github.io/#edge-browser-configurations**
+
 **7d. MS Edge mitgeben, welche Ciphers er NICHT nutzen soll**
-(Aufruf mit Parametern und Direktaufruf von https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html )
+Aufruf mit Parametern und Direktaufruf von https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html :
 "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --args --cipher-suite-denylist=0x009c,0x009d,0x002f,0x0035,0x000a,0xc00a,0xc009,0xc013,0xc014 https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html
-Auch möglich:
+
+Auch mögliche Parameter:
 --ssl-version-max=tls1.2
 --ssl-version-min=tls1.2
+
 Achtung! Unterschied Chrome/Edge
 Achtung: Brave oder Chrome nutzen nicht cipher-suite-denylist, sondern cipher-suite-blacklist als Parameter!
 The command-line flag is --cipher-suite-blacklist, with a comma-delimited list of cipher suites in hexadecimal. 
@@ -187,16 +192,23 @@ browser.urlbar.trimURLs = false
 > Punycode für internationalisierte Domainnamen, um mögliches Spoofing zu verhindern:
 network.IDN_show_punycode = true
 
-**##8. Dateianhänge und Makros in office**
+**##8a. Nessus-Tenable Audits**
+https://www.tenable.com/audits
+https://www.tenable.com/audits/CIS_Microsoft_Windows_Server_2022_Benchmark_v2.0.0_L1_DC
 
-**##9. Nessus-Scan Tenable**
+**##8b. Nessus-Scan Tenable intern**
+URL
+Suche nach 
 
-**##10. Stigviewer**
 
-**##11. https://hotcakex.github.io/**
+**##9. Stigviewer**
+https://www.stigviewer.com/stigs
 
-**##12. https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461**
+**##11. Wissen aufbauen 
+https://hotcakex.github.io/**
 
-**##13. Winget UI
+**##12.**
+https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
+
 
 https://stackedit.io/app#
