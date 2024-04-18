@@ -1,18 +1,30 @@
-1. Trennung zwischen Surf- / Mail-Account und Admin-Account
-Admin-Account ist schützenswert und kann evtl. in privilegierte AD-Gruppe hinzugefügt werden, die unsichere Dinge verhindert, die ein Admin normalerweise auch nicht braucht
-Der Surf- / Mail-Account kann normaler User oder Admin auf dem Client sein, aber ist durch Browser und Mails gefährdet. Der Großteil der Schadsoftware komtm per Mail oder von einer Website, die man als Admin besucht. Wir wollen die wichtigen Server schützen, indem auf den also etwas mehr gefährdeten Clients nicht die gleichen User arbeiten, die die Server administrieren.
+https://stackedit.io/app#
 
-2. Patche Software und Windows auf Servern und Clients frühzeitig
-Oft wird erst ein paar Tage nach der Veröffentlichung von Updates bekannt, welche Lücken die Vorgängerversion hatte. Hakcer brauchen nach Veröffentlichung und nach Bekanntgabe der Lücke oft ca. 24-48 Stunden, um die Lücke zu knacken.
+## 1. Mehrere Konten für IT-Administratoren: Trennung zwischen Surf- / Mail-Account und Admin-Account
 
-3. Pentest vs. Vulscan
+Als IT-Administrator ist es sinnvoll, mit mehreren Konten zu arbeiten. Die zusätzlichen Schritte zum Wechseln zwischen den Konten zahlen sich durch die Vorteile schnell aus.
+ 
+Gründe:
+
+**1a. Risiko reduzieren, dass Ihre Administratorrechte missbraucht werden. Sollte Konto beim Internetzugriff oder öffnen eines gefährlichen Dateianhang kompromittiert werden, können Angreifer nicht auf Ihre sensiblen Administratortools zugreifen.**
+
+**2a. Bessere Übersicht und Nachvollziehbarkeit bei Auffälligkeiten**
+
+Ein Admin-Account ist schützenswert und sollte deshalb in privilegierte AD-Gruppen hinzugefügt werden, die unsichere Verschlüsselungsmethoden verhindert, welche ein Admin normalerweise auch nicht braucht.
+
+Der Großteil der Schadsoftware kommt per Mail oder von einer Website, die man als Admin besucht. Wir wollen die wichtigen Server und User schützen, indem auf den also etwas mehr gefährdeten Clients nicht die gleichen User arbeiten, die die Server administrieren.
+
+## **2. Patche Software und Windows auf Servern und Clients frühzeitig**
+Oft wird erst ein paar Tage nach der Veröffentlichung von Updates bekannt, welche Lücken die Vorgängerversion hatte. Hacker brauchen nach Veröffentlichung und nach Bekanntgabe der Lücke oft ca. 24-48 Stunden, um die Lücke zu knacken.
+
+## **3. Pentest vs. Vulscan**
 Der Vulscan zeit dir an, welche Lücken dein Computer hat. Der Pentest sucht oft nach ausgenutzten Lücken. Angreifer suchen oft nach dem kürzesten Weg zum Ziel. Selten ist es eine Lücke, die Probleme bereitet, sondern die Kombination aus mehreren Lücken.
 
-4. Nutze FQDN bei RDP
+## **4. Nutze FQDN bei RDP**
 Kerberos ist sehr sicher und kann aber nur genutzt werden, wenn der FQDN deines Computers genutzt wird. Bei Nutzung des reinen Servernamens oder der IP wird das unsichere NTLM genutzt
 
-5. Wie sicher ist mein Computer? Mach den Audit-Test
-5a. ATAPAuditor (HTML-Report)
+## **5. Wie sicher ist mein Computer? Mach den Audit-Test**
+**5a. ATAPAuditor (HTML-Report)**
 #https://github.com/fbprogmbh/Audit-Test-Automation
 #https://www.fb-pro.com/audit-test-automation-package-audit-tap/
 Install-Module -Name PowerShellGet -Force
@@ -22,7 +34,7 @@ Import-Module ATAPAuditor
 #Save-ATAPHtmlReport -ReportName "Microsoft Windows Server 2022" -force -RiskScore
 Save-ATAPHtmlReport -ReportName "Microsoft Windows 11" -force -RiskScore
 
-5b. HardeningKitty (keine GUI)
+**5b. HardeningKitty (keine GUI)**
 #region winver
     $OSVersion=Get-CimInstance Win32_Operatingsystem | Select-Object -expand Caption
     $OSVersion
@@ -34,23 +46,27 @@ Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "H
 Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_user.csv"
 #https://github.com/scipag/HardeningKitty
 
-6. Sichere Kryptographie
-https://privacy.sexy/
+## 6. Sichere Kryptographie
+**6a https://privacy.sexy/**
 Auf der linken Seite "Security Improvements" anklicken
 dann
 Secure cryptpgraphy on IIS ...
 dann unten kopieren in die Zwischanablage
 und als Kryptographie.cmd speichern
 
-7. IISCrypto
+**6b. IISCrypto**
 https://www.nartac.com/Products/IISCrypto
 
-9. Sicher surfen - https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html
-https://hotcakex.github.io/#edge-browser-configurations
-Immer die aktuellste Version nutzen
+**##7. Sicher surfen** 
+**7a. https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html**
+
+**7b. https://hotcakex.github.io/#edge-browser-configurations**
+
+**7c. Immer die aktuellste Version nutzen**
 edge://settings/help
 Wer andere Browser nutzt: Autoupdate anschalten!
-MS Edge mitgeben, welche Ciphers er NICHT nutzen soll
+
+**7d. MS Edge mitgeben, welche Ciphers er NICHT nutzen soll**
 (Aufruf mit Parametern und Direktaufruf von https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html )
 "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --args --cipher-suite-denylist=0x009c,0x009d,0x002f,0x0035,0x000a,0xc00a,0xc009,0xc013,0xc014 https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html
 Auch möglich:
@@ -100,14 +116,12 @@ https://www.ibm.com/docs/en/wip-mg/5.0.0.1?topic=lists-cipher-list-best-quality-
 https://en.wikipedia.org/wiki/Transport_Layer_Security
 https://en.wikipedia.org/wiki/Version_history_for_TLS/SSL_support_in_web_browsers
 
-
-6b. Firefox 
+**7e. Firefox** 
 Link: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Mindeststandards/Archivdokumente/Migrationsleitfaden_Mindeststandard_BSI_TLS_Version_1_2.pdf?__blob=publicationFile&v=1
 Link: https://helgeklein.com/blog/disable-tls-1-0-and-1-1-in-firefox-now/
 Link: https://www.kim.uni-konstanz.de/en/email-and-internet/it-security-and-privacy/device-security/mozilla-firefox/optionen-fuer-sichere-verbindungen/
 
-## Ciphersuites "Firefox" GUI:
-
+**Ciphersuites "Firefox" GUI:**
 1. Aufrufen von "about:config"
 2. Suchen nach "security.ssl3."
 3. Werte wie folgt auf "false" setzen
@@ -124,8 +138,7 @@ security.ssl3.rsa_aes_256_sha
 
 
 
-## TLS-Version "Firefox" GUI
-
+**TLS-Version "Firefox" GUI**
 1. Aufrufen von about:config
 2. Suchen nach "security.tls.version.min"
 3. Wert "3" setzen und bestätigen 
@@ -138,8 +151,7 @@ security.ssl3.rsa_aes_256_sha
 3 = TLS 1.2
 4 = TLS 1.3
 
-## Verteilung
-
+ **Verteilung**
 In großen Betriebsumgebungen kann die Konfigurationsdatei prefs.js für Firefox auch
 mittels Automatisierungswerkzeugen zentral verteilt und für den Benutzerzugriff gesperrt werden.
 > %APPDATA%\Mozilla\Firefox\Profiles\ 
@@ -155,42 +167,36 @@ user_pref("security.ssl3.rsa_aes_128_sha", false);
 user_pref("security.ssl3.rsa_aes_256_gcm_sha384", false);
 user_pref("security.ssl3.rsa_aes_256_sha", false);
 
-## Sonstige Settings
-
+**Sonstige Settings**
 security.pki.sha1_enforcement_level = 1
-
 > Unsichere Renegotiation verbieten (kann Probleme verursachen):
 security.ssl.require_safe_negotiation = true
 security.ssl.treat_unsafe_negotiation_as_broken = true
-
-
 > Strenges Certifikate Pinning (HPKP) erzwingen (z.B. für Add-on Updates):
 security.cert_pinning.enforcement_level = 2
-
 > Mixed Content verbieten:
 security.mixed_content.block_display_content = true
 security.mixed_content.block_active_content = true 
-
 > Warnungen bei unverschlüsselten Seitenaufrufen:
 security.insecure_connection_icon.enabled = true
 security.insecure_connection_icon.pbmode.enabled = true
 security.insecure_connection_text.enabled = true
 security.insecure_connection_text.pbmode.enabled = true
-
 > Alle Teile der URL in der Adressleiste anzeigen (z.B. http(s)://)::
 browser.urlbar.trimURLs = false
-
 "аррӏе.com" und "apple.com" sehen zwar auf den ersten Blick gleich aus, ersteres enthält aber kyrillische Zeichen
-
 > Punycode für internationalisierte Domainnamen, um mögliches Spoofing zu verhindern:
 network.IDN_show_punycode = true
 
-10. Dateianhänge und Makros in office
+**##8. Dateianhänge und Makros in office**
 
-11. Nessus
+**##9. Nessus-Scan Tenable**
 
-12. Stigviewer
+**##10. Stigviewer**
 
-13. https://hotcakex.github.io/
+**##11. https://hotcakex.github.io/**
 
-14. https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
+**##12. https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461**
+
+
+https://stackedit.io/app#
