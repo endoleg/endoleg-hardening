@@ -1,27 +1,25 @@
 https://stackedit.io/app#
 
 ## 1. Mehrere Konten für IT-Administratoren: Trennung zwischen Surf- / Mail-Account und Admin-Account
-
-Als IT-Administrator ist es sinnvoll, mit mehreren Konten zu arbeiten. Die zusätzlichen Schritte zum Wechseln zwischen den Konten zahlen sich durch die Vorteile schnell aus.
- 
-Gründe:
-
-**1a. Risiko reduzieren, dass Ihre Administratorrechte missbraucht werden. Sollte Konto beim Internetzugriff oder öffnen eines gefährlichen Dateianhang kompromittiert werden, können Angreifer nicht auf Ihre sensiblen Administratortools zugreifen.**
-
-**2a. Bessere Übersicht und Nachvollziehbarkeit bei Auffälligkeiten**
-
-Ein Admin-Account ist schützenswert und sollte deshalb in privilegierte AD-Gruppen hinzugefügt werden, die unsichere Verschlüsselungsmethoden verhindert, welche ein Admin normalerweise auch nicht braucht.
-
-Der Großteil der Schadsoftware kommt per Mail oder von einer Website, die man als Admin besucht. Wir wollen die wichtigen Server und User schützen, indem auf den also etwas mehr gefährdeten Clients nicht die gleichen User arbeiten, die die Server administrieren.
+- Aufwand lohnt sich
+- Risikoreduzierung beim Internetzugriff oder öffnen eines gefährlichen Dateianhangs 
+- Bessere Übersicht und Nachvollziehbarkeit bei Auffälligkeiten
+- Admin-Account kann dann in gut geschützte AD-Gruppen hinzugefügt werden, ohne eingeschränkt zu sein bei Einwahl, Mail, Internetzugriff
+- Großteil der Schadsoftware kommt per Mail oder von einer Website, die man als Admin besucht. 
 
 ## **2. Patche Software und Windows auf Servern und Clients frühzeitig**
-Oft wird erst ein paar Tage nach der Veröffentlichung von Updates bekannt, welche Lücken die Vorgängerversion hatte. Hacker brauchen nach Veröffentlichung und nach Bekanntgabe der Lücke oft ca. 24-48 Stunden, um die Lücke zu knacken.
+- Oft wird erst ein paar Tage nach der Veröffentlichung von Updates bekannt, welche Lücken die Vorgängerversion hatte. Hacker brauchen nach Veröffentlichung und nach Bekanntgabe der Lücke oft ca. 24-48 Stunden, um die Lücke zu knacken.
+- Tool1: WingetUI
+- Tool2: WindowsUpdateManager
 
 ## **3. Pentest vs. Vulscan**
-Der Vulscan zeit dir an, welche Lücken dein Computer hat. Der Pentest sucht oft nach ausgenutzten Lücken. Angreifer suchen oft nach dem kürzesten Weg zum Ziel. Selten ist es eine Lücke, die Probleme bereitet, sondern die Kombination aus mehreren Lücken.
+- Vulscan zeigt an, welche Lücken dein Computer hat 
+- Pentest sucht oft nach ausgenutzten Lücken
+- Angreifer suchen oft nach dem kürzesten Weg zum Ziel. Selten ist es eine einzige Lücke, die Probleme bereitet, sondern die Kombination aus mehreren leicht zu knackenden Lücken.
 
 ## **4. Nutze FQDN bei RDP**
-Kerberos ist sehr sicher und kann aber nur genutzt werden, wenn der FQDN deines Computers genutzt wird. Bei Nutzung des reinen Servernamens oder der IP wird das unsichere NTLM genutzt
+- Kerberos ist sehr sicher 
+- Kerberos für RDP kann nur genutzt werden, wenn der FQDN deines Computers genutzt wird. Bei Nutzung des reinen Servernamens oder der IP wird üblicherweise das unsichere NTLM genutzt
 
 ## **5. Wie sicher ist mein Computer? Mach den Audit-Test**
 **5a. ATAPAuditor (HTML-Report)**
