@@ -6,7 +6,8 @@ https://stackedit.io/app#
 - Risikoreduzierung beim Internetzugriff oder öffnen eines gefährlichen Dateianhangs 
 - Bessere Übersicht und Nachvollziehbarkeit bei Auffälligkeiten
 - Admin-Account kann dann in gut geschützte AD-Gruppen hinzugefügt werden, ohne eingeschränkt zu sein bei Einwahl, Mail, Internetzugriff
-- Großteil der Schadsoftware kommt per Mail oder von einer Website, die man als Admin besucht. 
+- Großteil der Schadsoftware kommt per Mail oder von einer Website, die man als Admin besucht.
+- https://www.security-insider.de/e-mails-sind-wichtigstes-einfallstor-fuer-cyberangriffe-a-794599/
 
 ## **2. Patche Software und Windows auf Servern und Clients frühzeitig**
 - Oft wird erst ein paar Tage nach der Veröffentlichung von Updates bekannt, welche Lücken die Vorgängerversion hatte. Hacker brauchen nach Veröffentlichung und nach Bekanntgabe der Lücke oft ca. 24-48 Stunden, um die Lücke zu knacken.
