@@ -212,5 +212,8 @@ https://hotcakex.github.io/**
 **##12.**
 https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
 
+**LAPS
+
+**Credential guard
 
 https://stackedit.io/app#
