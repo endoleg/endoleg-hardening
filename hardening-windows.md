@@ -17,6 +17,8 @@ https://stackedit.io/app#
 - Vulscan zeigt an, welche Lücken dein Computer hat 
 - Pentest sucht oft nach ausgenutzten Lücken
 - Angreifer suchen oft nach dem kürzesten Weg zum Ziel. Selten ist es eine einzige Lücke, die Probleme bereitet, sondern die Kombination aus mehreren leicht zu knackenden Lücken.
+- https://www.pingcastle.com/documentation/healthcheck/
+- https://www.semperis.com/de/purple-knight/security-indicators/
 
 ## **4. Nutze FQDN (Fully Qualified Domain Name) bei RDP**
 - Kerberos ist sehr sicher 
