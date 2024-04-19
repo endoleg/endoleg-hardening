@@ -22,3 +22,5 @@ https://community.tenable.com/s/article/How-to-view-and-change-the-Windows-Regis
 Frequently Asked Question about TLS and Cipher Suite configuration
 https://techcommunity.microsoft.com/t5/security-compliance-and-identity/frequently-asked-question-about-tls-and-cipher-suite/ba-p/3965784
 
+windows-forensic-artifacts
+https://github.com/Psmths/windows-forensic-artifacts
