@@ -60,7 +60,31 @@ und als Kryptographie.cmd speichern
 **6b. IISCrypto**
 https://www.nartac.com/Products/IISCrypto
 
-**##7. Sicher surfen** 
+
+**##7a. Nessus-Tenable Audits**
+https://www.tenable.com/audits
+https://www.tenable.com/audits/CIS_Microsoft_Windows_Server_2022_Benchmark_v2.0.0_L1_DC
+
+**##7b. Nessus-Scan Tenable intern**
+URL
+Suche nach 
+
+
+**##8. Stigviewer**
+https://www.stigviewer.com/stigs
+
+**##9. Wissen aufbauen 
+https://hotcakex.github.io/**
+
+**##10.**
+https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
+
+**##11. LAPS
+
+**##12. Credential guard
+
+
+**##13. Sicher surfen** 
 **7a. Prüfung mit SSLLabs 
 https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html**
 
@@ -195,26 +219,5 @@ browser.urlbar.trimURLs = false
 > Punycode für internationalisierte Domainnamen, um mögliches Spoofing zu verhindern:
 network.IDN_show_punycode = true
 
-**##8a. Nessus-Tenable Audits**
-https://www.tenable.com/audits
-https://www.tenable.com/audits/CIS_Microsoft_Windows_Server_2022_Benchmark_v2.0.0_L1_DC
-
-**##8b. Nessus-Scan Tenable intern**
-URL
-Suche nach 
-
-
-**##9. Stigviewer**
-https://www.stigviewer.com/stigs
-
-**##11. Wissen aufbauen 
-https://hotcakex.github.io/**
-
-**##12.**
-https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
-
-**LAPS
-
-**Credential guard
-
+Markdown Editor
 https://stackedit.io/app#
