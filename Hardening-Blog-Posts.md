@@ -24,3 +24,6 @@ https://techcommunity.microsoft.com/t5/security-compliance-and-identity/frequent
 
 windows-forensic-artifacts
 https://github.com/Psmths/windows-forensic-artifacts
+
+query-logs-with-powershell
+https://iqunit.com/query-logs-with-powershell/
