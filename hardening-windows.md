@@ -6,7 +6,8 @@ https://stackedit.io/app#
 - Aufwand lohnt sich bzgl. Sicherheit (Risikoreduzierung beim Internetzugriff oder öffnen eines gefährlichen Dateianhangs)
 - Bessere Übersicht und Nachvollziehbarkeit bei Auffälligkeiten
 - Admin-Account kann dann in gut geschützte AD-Gruppen hinzugefügt werden, ohne eingeschränkt zu sein bei Einwahl, Mail, Internetzugriff
-- Großteil der Schadsoftware kommt per Mail oder von einer Website, die man als Admin besucht.
+- Großteil der Schadsoftware kommt per Mail oder von einer Website, die man als Admin besucht
+- Mehrere Konten sollten auch VERSCHIEDENE Kennwörter haben
 - https://www.security-insider.de/e-mails-sind-wichtigstes-einfallstor-fuer-cyberangriffe-a-794599/
 
 ## ------------------------------------------------------------------------------
