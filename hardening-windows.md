@@ -44,8 +44,6 @@ Import-Module ATAPAuditor
 Save-ATAPHtmlReport -ReportName "Microsoft Windows Server 2022" -force -RiskScore
 Save-ATAPHtmlReport -ReportName "Microsoft Windows 11" -force -RiskScore
 
-## ------------------------------------------------------------------------------
-
 **5b. HardeningKitty (keine GUI)**
 https://github.com/scipag/HardeningKitty
 #region winver
@@ -58,7 +56,10 @@ Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "H
 #user
 Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_user.csv"
 
-## 6. Sichere Kryptographie
+
+## ------------------------------------------------------------------------------
+
+## ** 6. Sichere Kryptographie
 **6a Website https://privacy.sexy/**
 Auf der linken Seite "Security Improvements" anklicken
 dann
@@ -69,42 +70,55 @@ und als Kryptographie.cmd speichern
 **6b. IISCrypto**
 https://www.nartac.com/Products/IISCrypto
 
+## ------------------------------------------------------------------------------
 
-**##7a. Nessus-Tenable Audits**
+
+## ** 7. Nessus
+**7a. Nessus-Tenable Audits**
 https://www.tenable.com/audits
 https://www.tenable.com/audits/CIS_Microsoft_Windows_Server_2022_Benchmark_v2.0.0_L1_DC
 
-**##7b. Nessus-Scan Tenable intern**
+**7b. Nessus-Scan Tenable intern**
 URL
 Suche nach 
 
+## ------------------------------------------------------------------------------
 
-**##8. Stigviewer**
+## ** 8. Stigviewer**
 https://www.stigviewer.com/stigs
 
-**##9. Wissen aufbauen 
+## ------------------------------------------------------------------------------
+
+## ** 9. Wissen aufbauen 
 https://hotcakex.github.io/**
 
-**##10.**
+## ------------------------------------------------------------------------------
+
+## ** 10.**
 https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
 
-**##11. LAPS
+## ------------------------------------------------------------------------------
 
-**##12. Credential guard
+## ** 11. LAPS
 
+## ------------------------------------------------------------------------------
 
-**##13. Sicher surfen** 
-**7a. Prüfung mit SSLLabs 
+## ** 12. Credential guard
+
+## ------------------------------------------------------------------------------
+
+## ** 13. Sicher surfen** 
+** Prüfung mit SSLLabs 
 https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html**
 
-**7b. Immer die aktuellste Browser-Version nutzen**
+** Immer die aktuellste Browser-Version nutzen**
 edge://settings/help
 Wer andere Browser nutzt: Autoupdate anschalten!
 
-**7c. Stelle deinen Browser sicher ein 
+** Stelle deinen Browser sicher ein 
 https://hotcakex.github.io/#edge-browser-configurations**
 
-**7d. MS Edge mitgeben, welche Ciphers er NICHT nutzen soll**
+** MS Edge mitgeben, welche Ciphers er NICHT nutzen soll**
 Aufruf mit Parametern und Direktaufruf von https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html :
 "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --args --cipher-suite-denylist=0x009c,0x009d,0x002f,0x0035,0x000a,0xc00a,0xc009,0xc013,0xc014 https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html
 
@@ -227,6 +241,10 @@ browser.urlbar.trimURLs = false
 "аррӏе.com" und "apple.com" sehen zwar auf den ersten Blick gleich aus, ersteres enthält aber kyrillische Zeichen
 > Punycode für internationalisierte Domainnamen, um mögliches Spoofing zu verhindern:
 network.IDN_show_punycode = true
+
+## ------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------
 
 Markdown Editor
 https://stackedit.io/app#
