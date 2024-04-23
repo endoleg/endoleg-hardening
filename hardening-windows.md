@@ -235,9 +235,12 @@ https://devblogs.microsoft.com/scripting/use-custom-views-from-windows-event-vie
 
 ## ------------------------------------------------------------------------------
 
-**16 Analyse (gathering data)
+**16 Analyse (Incident response - gathering data)
 
-folgt
+https://github.com/nov3mb3r/trident/blob/main/trident.ps1
+https://github.com/securycore/Get-Baseline/blob/master/Get-Baseline.ps1
+https://github.com/A-mIn3/WINspect/blob/master/WINspect.ps1
+https://github.com/gladiatx0r/Powerless/blob/master/Powerless.bat
 
 ## ------------------------------------------------------------------------------
 
