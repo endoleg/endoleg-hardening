@@ -8,14 +8,14 @@ https://stackedit.io/app#
 - Großteil der Schadsoftware kommt per Mail oder von einer Website, die man als Admin besucht.
 - https://www.security-insider.de/e-mails-sind-wichtigstes-einfallstor-fuer-cyberangriffe-a-794599/
 
-## --------------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------
 
 ## **2. Patche Software und Windows auf Servern und Clients frühzeitig**
 - Oft wird erst ein paar Tage nach der Veröffentlichung von Updates bekannt, welche Lücken die Vorgängerversion hatte. Hacker brauchen nach Veröffentlichung und nach Bekanntgabe der Lücke oft ca. 24-48 Stunden, um die Lücke zu knacken.
 - Tool1: WingetUI: https://github.com/marticliment/WingetUI/releases/ und https://github.com/marticliment/WingetUI/
 - Tool2: WindowsUpdateManager: https://github.com/DavidXanatos/wumgr/releases/ und https://github.com/DavidXanatos/wumgr
 
-## --------------------------------------------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------
 
 ## **3. Pentest vs. Vulscan**
 - Vulscan zeigt an, welche Lücken dein Computer hat 
@@ -24,10 +24,14 @@ https://stackedit.io/app#
 - https://www.pingcastle.com/documentation/healthcheck/
 - https://www.semperis.com/de/purple-knight/security-indicators/
 
+## ------------------------------------------------------------------------------
+
 ## **4. Nutze FQDN (Fully Qualified Domain Name) bei RDP**
 - Kerberos ist sehr sicher 
 - Kerberos für RDP kann nur genutzt werden, wenn der FQDN deines Computers genutzt wird. Bei Nutzung des reinen Servernamens oder der IP wird üblicherweise das unsichere NTLM genutzt
 - Beispiel: svaSERVER1.ha10.ohoh.local
+
+## ------------------------------------------------------------------------------
 
 ## **5. Wie sicher ist mein Computer? Mach den Audit-Test**
 **5a. ATAPAuditor (HTML-Report)**
@@ -39,6 +43,8 @@ Import-Module ATAPHtmlReport
 Import-Module ATAPAuditor
 Save-ATAPHtmlReport -ReportName "Microsoft Windows Server 2022" -force -RiskScore
 Save-ATAPHtmlReport -ReportName "Microsoft Windows 11" -force -RiskScore
+
+## ------------------------------------------------------------------------------
 
 **5b. HardeningKitty (keine GUI)**
 https://github.com/scipag/HardeningKitty
