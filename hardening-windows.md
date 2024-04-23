@@ -80,8 +80,13 @@ https://www.tenable.com/audits
 https://www.tenable.com/audits/CIS_Microsoft_Windows_Server_2022_Benchmark_v2.0.0_L1_DC
 
 **7b. Nessus-Scan Tenable intern**
-URL
-Suche nach 
+
+URL https://tenable/ aufrufen
+rechts oben
+![image](https://github.com/endoleg/endoleg-hardening/assets/49591978/9d5c7a6a-3cb9-4ecc-81d5-a54b5db4bce9)
+Host Assets auswählen
+IP-Adresse des gewünschten Endgerätes eingeben
+
 
 ## ------------------------------------------------------------------------------
 
@@ -166,9 +171,8 @@ Link: https://www.kim.uni-konstanz.de/en/email-and-internet/it-security-and-priv
 3 = TLS 1.2
 4 = TLS 1.3
 
-## ------------------------------------------------------------------------------
-## ------------------------------------------------------------------------------
+ 
 ## ------------------------------------------------------------------------------
 
-Markdown Editor
+erstellt mit Markdown Editor
 https://stackedit.io/app#
