@@ -127,9 +127,21 @@ https://www.stigviewer.com/stigs
 
 https://hotcakex.github.io/ durchforsten
 
+Tools
 https://www.oo-software.com/de/shutup10
-
 https://www.w10privacy.de/deutsch-start/anleitung/
+
+SiSyPHuS Win10 - Studie zu Systemaufbau, Protokollierung, Härtung und Sicherheitsfunktionen in Windows 10: 
+https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Studien/SiSyPHuS_Win10/SiSyPHuS_node.html
+
+CIS Benchmark PDFs: 
+https://downloads.cisecurity.org/#/
+
+Group Policy Objects - Vorlagen: 
+https://public.cyber.mil/stigs/gpo/
+
+admx.help
+https://admx.help/
 
 ## ------------------------------------------------------------------------------
 
