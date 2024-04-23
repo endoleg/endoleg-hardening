@@ -241,6 +241,7 @@ https://github.com/nov3mb3r/trident/blob/main/trident.ps1
 https://github.com/securycore/Get-Baseline/blob/master/Get-Baseline.ps1
 https://github.com/A-mIn3/WINspect/blob/master/WINspect.ps1
 https://github.com/gladiatx0r/Powerless/blob/master/Powerless.bat
+https://www.sonicwall.com/support/knowledge-base/how-to-collect-sentinelone-logs-from-the-windows-mac-and-linux/220509105016660/
 
 ## ------------------------------------------------------------------------------
 
