@@ -222,7 +222,9 @@ Link: https://www.kim.uni-konstanz.de/en/email-and-internet/it-security-and-priv
 ## ------------------------------------------------------------------------------
 
 **14 RSS Feeds
+
 CERT.at-Tagesberichte: https://cert.at/de/services/feeds/
+
 Kann auch in Outlook genutzt werden
 
 ## ------------------------------------------------------------------------------
