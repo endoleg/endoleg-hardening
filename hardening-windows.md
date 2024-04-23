@@ -146,7 +146,9 @@ https://admx.help/
 ## ------------------------------------------------------------------------------
 
 ## ** 10. Studie: "Evidence-based cybersecurity policy? A meta-review of security control effectiveness"
+
 https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
+
 "Wir fanden kaum Belege für die Wirksamkeit von Sicherheitslösungen von der Stange, wie etwa spezielle Firewalls oder Antivirenprodukte. Stattdessen legen die Ergebnisse nahe, dass die wirksamsten Sicherheitsmaßnahmen die Systemkonfiguration und -wartung betreffen. Vor allem die Angriffsfläche einer Organisation ist der stärkste Prädiktor für Cybervorfälle. Die Angriffsfläche kann durch eine Reihe von Härtungsmaßnahmen verringert werden. Die Häufigkeit von Patches war der zweitstärkste Prädiktor für Cyber-Vorfälle."
 
 
