@@ -235,6 +235,12 @@ https://devblogs.microsoft.com/scripting/use-custom-views-from-windows-event-vie
 
 ## ------------------------------------------------------------------------------
 
+**16 Analyse (gathering data)
+
+folgt
+
+## ------------------------------------------------------------------------------
+
 
 erstellt mit Markdown Editor
 https://stackedit.io/app#
