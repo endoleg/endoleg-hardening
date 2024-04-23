@@ -39,29 +39,49 @@ https://stackedit.io/app#
 ## ------------------------------------------------------------------------------
 
 
+
 ## **5. Wie sicher ist mein Computer? Mach den Audit-Test**
+
 **5a. ATAPAuditor (HTML-Report)**
+
 https://github.com/fbprogmbh/Audit-Test-Automation
 https://www.fb-pro.com/audit-test-automation-package-audit-tap/
+
 Install-Module -Name PowerShellGet -Force
+
 Install-Module -Name ATAPAuditor -Force
+
 Import-Module ATAPHtmlReport
+
 Import-Module ATAPAuditor
+
 Save-ATAPHtmlReport -ReportName "Microsoft Windows Server 2022" -force -RiskScore
+
 Save-ATAPHtmlReport -ReportName "Microsoft Windows 11" -force -RiskScore
 
 **5b. HardeningKitty (keine GUI)**
-https://github.com/scipag/HardeningKitty
-#region winver
-    $OSVersion=Get-CimInstance Win32_Operatingsystem | Select-Object -expand Caption
-    $OSVersion
-#endregion
-Import-Module HardeningKitty.psm1
-#machine
-Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_machine.csv"
-#user
-Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_user.csv"
 
+https://github.com/scipag/HardeningKitty
+
+#region winver
+
+    $OSVersion=Get-CimInstance Win32_Operatingsystem | Select-Object -expand Caption
+
+    $OSVersion
+
+#endregion
+
+Import-Module HardeningKitty.psm1
+
+#machine
+
+Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-
+Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_machine.csv"
+
+#user
+
+Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "Hardening-
+Audit\HardeningKitty\lists\finding_list_cis_microsoft_windows_11_enterprise_22h2_user.csv"
 
 ## ------------------------------------------------------------------------------
 
