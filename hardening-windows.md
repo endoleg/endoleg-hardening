@@ -99,7 +99,12 @@ https://www.stigviewer.com/stigs
 ## ------------------------------------------------------------------------------
 
 ## ** 9. Wissen aufbauen 
-https://hotcakex.github.io/**
+
+https://hotcakex.github.io/ durchforsten
+
+https://www.oo-software.com/de/shutup10
+
+https://www.w10privacy.de/deutsch-start/anleitung/
 
 ## ------------------------------------------------------------------------------
 
