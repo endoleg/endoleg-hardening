@@ -26,7 +26,7 @@ https://stackedit.io/app#
 
 ## ------------------------------------------------------------------------------
 
-## **4. Nutze FQDN (Fully Qualified Domain Name) bei RDP**
+## **4. Nutzung von FQDN (Fully Qualified Domain Name) bei RDP, Skripten usw.**
 - Kerberos ist sehr sicher 
 - Kerberos für RDP kann nur genutzt werden, wenn der FQDN deines Computers genutzt wird. Bei Nutzung des reinen Servernamens oder der IP wird üblicherweise das unsichere NTLM genutzt
 - Beispiel: svaSERVER1.ha10.ohoh.local
