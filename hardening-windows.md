@@ -16,12 +16,15 @@ https://stackedit.io/app#
 - Oft wird erst ein paar Tage nach der Veröffentlichung von Updates bekannt, welche Lücken die Vorgängerversion hatte. Hacker brauchen nach Veröffentlichung und nach Bekanntgabe der Lücke oft ca. 24-48 Stunden, um die Lücke zu knacken.
 - Tool1: WingetUI: https://github.com/marticliment/WingetUI/releases/ und https://github.com/marticliment/WingetUI/
 - Tool2: WindowsUpdateManager: https://github.com/DavidXanatos/wumgr/releases/ und https://github.com/DavidXanatos/wumgr
+- News zu Patches https://www.ghacks.net/category/windows/ und https://www.bleepingcomputer.com/news/microsoft/ und https://isc.sans.edu/diary/ zur Einschätzung.
+- Bei https://www.ghacks.net/category/windows/  kann die KB-Nummer ermittelt werden (steht bei Serverversion hinten dran).
+- Seite, um einschätzen zu können, ob aktuelle Patches Fehler verursachen: https://www.askwoody.com bzw. https://www.askwoody.com/patch-list-master/
+- Es gibt auch eine Google-Gruppe, wo man schnell erfährt, falls es Probleme mit den Updates gibt: https://groups.google.com/g/patchmanagement (nur mit Google-Konto)
 
 ## ------------------------------------------------------------------------------
 
 ## **3. Pentest vs. Vulscan**
-- Vulscan zeigt an, welche Lücken dein Computer hat 
-- Pentest sucht oft nach ausgenutzten Lücken
+- Vulscan zeigt an, welche Lücken dein Computer hat, Pentest sucht eher nach üblicherweise ausgenutzten Lücken
 - Angreifer suchen oft nach dem kürzesten Weg zum Ziel. Selten ist es eine einzige Lücke, die Probleme bereitet, sondern die Kombination aus mehreren leicht zu knackenden Lücken.
 - https://www.pingcastle.com/documentation/healthcheck/
 - https://www.semperis.com/de/purple-knight/security-indicators/
@@ -29,7 +32,7 @@ https://stackedit.io/app#
 ## ------------------------------------------------------------------------------
 
 ## **4. Nutzung von FQDN (Fully Qualified Domain Name) bei RDP, Skripten usw.**
-- Kerberos ist sehr sicher 
+- Ziel: Soe viel wie möglich Kerberos, denn Kerberos ist im Gegensatz zu NTLM sehr sicher 
 - Kerberos für RDP kann nur genutzt werden, wenn der FQDN deines Computers genutzt wird. Bei Nutzung des reinen Servernamens oder der IP wird üblicherweise das unsichere NTLM genutzt
 - Beispiel: svaSERVER1.ha10.ohoh.local
 
@@ -61,7 +64,7 @@ Invoke-HardeningKitty -Mode Audit -EmojiSupport -report -log -FileFindingList "H
 
 ## ------------------------------------------------------------------------------
 
-## ** 6. Sichere Kryptographie
+## ** 6. Sichere Kryptographie nutzen !
 **6a Website https://privacy.sexy/**
 Auf der linken Seite "Security Improvements" anklicken
 dann
@@ -75,23 +78,22 @@ https://www.nartac.com/Products/IISCrypto
 ## ------------------------------------------------------------------------------
 
 
-## ** 7. Nessus
-**7a. Nessus-Tenable Audits**
-https://www.tenable.com/audits
-https://www.tenable.com/audits/CIS_Microsoft_Windows_Server_2022_Benchmark_v2.0.0_L1_DC
-
-**7b. Nessus-Scan Tenable intern**
-
+## ** 7. Nessus, um sich einen Überblick über einen Computer zu verschaffen
+**7a. Nessus-Scan Tenable intern**
 URL https://tenable/ aufrufen
 rechts oben
 ![image](https://github.com/endoleg/endoleg-hardening/assets/49591978/9d5c7a6a-3cb9-4ecc-81d5-a54b5db4bce9)
 Host Assets auswählen
 IP-Adresse des gewünschten Endgerätes eingeben
 
+**7b. Nessus-Tenable Audits**
+https://www.tenable.com/audits
+https://www.tenable.com/audits/CIS_Microsoft_Windows_Server_2022_Benchmark_v2.0.0_L1_DC
+
 
 ## ------------------------------------------------------------------------------
 
-## ** 8. Stigviewer**
+## ** 8. Stigviewer
 https://www.stigviewer.com/stigs
 - kostenlos
 - ermöglicht es, die Sicherheitsvorgaben (Security Technical Implementation Guides, kurz STIGs) des US-Verteidigungsministeriums für verschiedene Betriebssysteme und Anwendungen anzuzeigen und zu verwalten.
@@ -109,13 +111,16 @@ https://www.w10privacy.de/deutsch-start/anleitung/
 
 ## ------------------------------------------------------------------------------
 
-## ** 10. Evidence-based cybersecurity policy? A meta-review of security control effectiveness**
+## ** 10. Studie: "Evidence-based cybersecurity policy? A meta-review of security control effectiveness"
 https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
-"We found little evidence regarding the efficacy of off-the-shelf security solutions, such as specific firewalls or antivirus products. Instead the evidence suggested that the most effective security interventions concern system configuration and maintenance. In particular, an organisation’s attack surface is the strongest predictor of cyber incidents. Attack surface can be reduced by a range of hardening measures. Patch cadence was the second strongest predictors of cyber incidents."
+"Wir fanden kaum Belege für die Wirksamkeit von Sicherheitslösungen von der Stange, wie etwa spezielle Firewalls oder Antivirenprodukte. Stattdessen legen die Ergebnisse nahe, dass die wirksamsten Sicherheitsmaßnahmen die Systemkonfiguration und -wartung betreffen. Vor allem die Angriffsfläche einer Organisation ist der stärkste Prädiktor für Cybervorfälle. Die Angriffsfläche kann durch eine Reihe von Härtungsmaßnahmen verringert werden. Die Häufigkeit von Patches war der zweitstärkste Prädiktor für Cyber-Vorfälle."
+
 
 ## ------------------------------------------------------------------------------
 
-## ** 11. LAPS
+## ** 11. LAPS (Local Administrator Password Solution)
+LAPS ist eine, von Microsoft entwickelte Lösung, Passwörter automatisiert und zyklisch zu verwalten. In erster Linie ergibt das für die lokalen Administratorkonten Sinn.
+
 [https://www.scip.ch/?labs.20230518](https://www.scip.ch/?labs.20230518)
 
 [https://techcommunity.microsoft.com/t5/windows-it-pro-blog/skilling-snack-windows-laps/ba-p/3805257](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/skilling-snack-windows-laps/ba-p/3805257)
@@ -128,7 +133,7 @@ https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
 
 ## ------------------------------------------------------------------------------
 
-## ** 12. Credential guard
+## ** 12. RDP-Sitzungen absichern mit Remote Credential Guard
 [https://www.windowspro.de/wolfgang-sommergut/rdp-sitzungen-absichern-remote-credential-guard](https://www.windowspro.de/wolfgang-sommergut/rdp-sitzungen-absichern-remote-credential-guard)
 
 [https://www.der-windows-papst.de/2021/06/06/rdp-verbindungen-mit-windows-defender-remote-credential-guard-absichern/](https://www.der-windows-papst.de/2021/06/06/rdp-verbindungen-mit-windows-defender-remote-credential-guard-absichern/)
@@ -139,7 +144,7 @@ https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
 
 ## ------------------------------------------------------------------------------
 
-## ** 13. Sicher surfen** 
+## ** 13. Sicher surfen mit Edge oder Firefox** 
 **Prüfung mit SSLLabs**
 https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html
 
