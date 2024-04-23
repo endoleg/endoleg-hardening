@@ -229,5 +229,12 @@ Kann auch in Outlook genutzt werden
 
 ## ------------------------------------------------------------------------------
 
+**15 Event Viewer: Custom Views
+
+https://devblogs.microsoft.com/scripting/use-custom-views-from-windows-event-viewer-in-powershell/
+
+## ------------------------------------------------------------------------------
+
+
 erstellt mit Markdown Editor
 https://stackedit.io/app#
