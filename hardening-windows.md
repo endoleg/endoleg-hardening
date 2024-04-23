@@ -1,4 +1,5 @@
 
+
 https://stackedit.io/app#
 
 ## 1. Mehrere Konten für IT-Administratoren: Trennung zwischen Surf- / Mail-Account und Admin-Account
@@ -86,6 +87,9 @@ Suche nach
 
 ## ** 8. Stigviewer**
 https://www.stigviewer.com/stigs
+- kostenlos
+- ermöglicht es, die Sicherheitsvorgaben (Security Technical Implementation Guides, kurz STIGs) des US-Verteidigungsministeriums für verschiedene Betriebssysteme und Anwendungen anzuzeigen und zu verwalten.
+- STIGs sind detaillierte Richtlinien, die sicherstellen sollen, dass Systeme sicher konfiguriert sind und Sicherheitsstandards einhalten. 
 
 ## ------------------------------------------------------------------------------
 
@@ -94,29 +98,46 @@ https://hotcakex.github.io/**
 
 ## ------------------------------------------------------------------------------
 
-## ** 10.**
+## ** 10. Evidence-based cybersecurity policy? A meta-review of security control effectiveness**
 https://www.tandfonline.com/doi/full/10.1080/23738871.2024.2335461
+"We found little evidence regarding the efficacy of off-the-shelf security solutions, such as specific firewalls or antivirus products. Instead the evidence suggested that the most effective security interventions concern system configuration and maintenance. In particular, an organisation’s attack surface is the strongest predictor of cyber incidents. Attack surface can be reduced by a range of hardening measures. Patch cadence was the second strongest predictors of cyber incidents."
 
 ## ------------------------------------------------------------------------------
 
 ## ** 11. LAPS
+[https://www.scip.ch/?labs.20230518](https://www.scip.ch/?labs.20230518)
+
+[https://techcommunity.microsoft.com/t5/windows-it-pro-blog/skilling-snack-windows-laps/ba-p/3805257](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/skilling-snack-windows-laps/ba-p/3805257)
+
+[https://learn.microsoft.com/de-de/windows-server/identity/laps/laps-overview](https://learn.microsoft.com/de-de/windows-server/identity/laps/laps-overview)
+
+[https://techcommunity.microsoft.com/t5/windows-it-pro-blog/by-popular-demand-windows-laps-available-now/ba-p/3788747](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/by-popular-demand-windows-laps-available-now/ba-p/3788747)
+
+[https://blog.xpnsec.com/lapsv2-internals/](https://blog.xpnsec.com/lapsv2-internals/)
 
 ## ------------------------------------------------------------------------------
 
 ## ** 12. Credential guard
+[https://www.windowspro.de/wolfgang-sommergut/rdp-sitzungen-absichern-remote-credential-guard](https://www.windowspro.de/wolfgang-sommergut/rdp-sitzungen-absichern-remote-credential-guard)
+
+[https://www.der-windows-papst.de/2021/06/06/rdp-verbindungen-mit-windows-defender-remote-credential-guard-absichern/](https://www.der-windows-papst.de/2021/06/06/rdp-verbindungen-mit-windows-defender-remote-credential-guard-absichern/)
+
+[https://www.escde.net/blog/remote-verbindungen-mit-dem-windows-defender-remote-credential-guard-wdrcg-sicher-gestalten](https://www.escde.net/blog/remote-verbindungen-mit-dem-windows-defender-remote-credential-guard-wdrcg-sicher-gestalten)
+
+[https://4sysops.com/archives/secure-rdp-connections-using-remote-credential-guard/](https://4sysops.com/archives/secure-rdp-connections-using-remote-credential-guard/)
 
 ## ------------------------------------------------------------------------------
 
 ## ** 13. Sicher surfen** 
-** Prüfung mit SSLLabs 
-https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html**
+**Prüfung mit SSLLabs**
+https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html
 
-** Immer die aktuellste Browser-Version nutzen**
+**Immer die aktuellste Browser-Version nutzen**
 edge://settings/help
 Wer andere Browser nutzt: Autoupdate anschalten!
 
-** Stelle deinen Browser sicher ein 
-https://hotcakex.github.io/#edge-browser-configurations**
+**Stelle deinen Browser sicher ein**
+https://hotcakex.github.io/#edge-browser-configurations
 
 **13a. MS Edge mitgeben, welche Ciphers er NICHT nutzen soll**
 Aufruf mit Parametern und Direktaufruf von https://clienttest.ssllabs.com:8443/ssltest/viewMyClient.html :
