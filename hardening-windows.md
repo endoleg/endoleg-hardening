@@ -202,8 +202,11 @@ https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies#tlsciphersu
 
 **13b. Firefox** 
 Link: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Mindeststandards/Archivdokumente/Migrationsleitfaden_Mindeststandard_BSI_TLS_Version_1_2.pdf?__blob=publicationFile&v=1
+
 Link: https://helgeklein.com/blog/disable-tls-1-0-and-1-1-in-firefox-now/
+
 Link: https://www.kim.uni-konstanz.de/en/email-and-internet/it-security-and-privacy/device-security/mozilla-firefox/optionen-fuer-sichere-verbindungen/
+
 
 **TLS-Version "Firefox" GUI**
 1. Aufrufen von about:config
