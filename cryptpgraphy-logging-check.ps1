@@ -1,6 +1,6 @@
 Get-ItemPropertyValue -Path hklm:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL -Name EventLogging
 
-#enable logging
+# enable verbose logging for the Secure Channel (SCHANNEL) security provider in Windows.
 Set-ItemProperty -Path hklm:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL -Name EventLogging -Value 7
 #Restart-Computer
 
@@ -38,6 +38,8 @@ Write-Output "`nTargetName"
 $Events | group TargetName | select count, name
 
 
-#disable logging
-Set-ItemProperty -Path hklm:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL -Name EventLogging -Value 1 
-#Restart-Computer
+<#
+    #disable logging
+    Set-ItemProperty -Path hklm:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL -Name EventLogging -Value 1 
+    #Restart-Computer
+#>
